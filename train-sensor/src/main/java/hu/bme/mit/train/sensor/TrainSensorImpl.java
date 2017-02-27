@@ -12,6 +12,10 @@ public class TrainSensorImpl implements TrainSensor {
 		this.controller = controller;
 	}
 
+	public SpeedTracker(){
+		System.out.println(controller.getReferenceSpeed());
+	}
+
 	@Override
 	public int getSpeedLimit() {
 		return speedLimit;
