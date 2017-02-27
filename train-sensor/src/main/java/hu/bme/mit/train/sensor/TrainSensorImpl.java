@@ -12,7 +12,7 @@ public class TrainSensorImpl implements TrainSensor {
 		this.controller = controller;
 	}
 
-	public SpeedTracker(){
+	public void SpeedTracker(){
 		System.out.println(controller.getReferenceSpeed());
 	}
 
