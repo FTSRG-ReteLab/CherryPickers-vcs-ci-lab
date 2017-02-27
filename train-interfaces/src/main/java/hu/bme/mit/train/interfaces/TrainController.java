@@ -1,5 +1,7 @@
 package hu.bme.mit.train.interfaces;
 
+import com.google.common.collect.Table;
+
 public interface TrainController {
 
 	void followSpeed();
@@ -9,5 +11,6 @@ public interface TrainController {
 	void setSpeedLimit(int speedLimit);
 
 	void setJoystickPosition(int joystickPosition);
+	public Table tachograph();
 
 }

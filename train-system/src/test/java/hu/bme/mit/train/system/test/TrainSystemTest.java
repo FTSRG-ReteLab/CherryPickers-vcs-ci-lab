@@ -1,5 +1,6 @@
 package hu.bme.mit.train.system.test;
 
+import com.google.common.collect.Table;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -50,11 +51,21 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
+	@Test
 	public void test3(){
 		controller.setSpeedLimit(5);
 		user.overrideJoystickPosition(6);
 		controller.followSpeed();
 		Assert.assertEquals(5, controller.getReferenceSpeed());
+
+
+	}
+
+	@Test
+	public void test4(){
+		user.overrideJoystickPosition(5);
+		Table t=controller.tachograph();
+		Assert.assertNotNull(t);
 
 
 	}
